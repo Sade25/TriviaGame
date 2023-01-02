@@ -67,7 +67,37 @@ li:hover {
 .title{
     color: rgb(255, 250, 240);
 }
+
 .asked{
     padding: 15px;
     color: rgb(255, 250, 240);
+}
+
+@media only screen and (max-width: 575px){
+
+    .question {
+        height: auto;
+        width: 300px;
+        font-size: medium;
+    }
+
+    .title {
+        font-size: large;
+    }
+
+    .answers {
+        width: 300px;
+        height: auto;
+        font-size: medium;
+    }
+
+    .page {
+        height: 430px;
+        justify-content: center;
+    }
+
+    .game {
+        margin-left: 25px;
+    }
+
 }

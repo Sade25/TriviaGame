@@ -37,7 +37,11 @@ function runTimer(){
 
 function win() {
     var audio = document.getElementById("win");
+    audio.currentTime = 0;
     audio.play();
+    setTimeout(function() {
+        audio.pause();
+      }, 1000);
 }
 
 function lose() {
