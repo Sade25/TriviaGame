@@ -1,6 +1,6 @@
 var choice = null;
 var correct = null;
-var apiUrl = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=multiple";
+var apiUrl = "https://opentdb.com/api.php?amount=50&category=17&type=multiple";
 var allChoices = [];
 var timerId = null;
 let apiResult = null;
@@ -17,6 +17,7 @@ function runTimer(){
       if (timeLeft == -1) {
         clearTimeout(timerId);
         showIncorrect();
+        lose();
         index++;
         if(index === 50){
             gameOver();
@@ -41,7 +42,7 @@ function win() {
     audio.play();
     setTimeout(function() {
         audio.pause();
-      }, 1000);
+      }, 1500);
 }
 
 function lose() {
@@ -50,7 +51,7 @@ function lose() {
     audio.play();
     setTimeout(function() {
         audio.pause();
-      }, 500);
+      }, 1500);
     
 }
 
